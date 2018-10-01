@@ -58,7 +58,7 @@ class SmartCalculator {
       }
       for (let op = 0; op < this.value.length; op++) {
         if (this.value[op] === "-") {
-          num = parseInt(this.value[op - 1]) - parseInt(this.value[op + 1]);
+          num = this.value[op - 1] - this.value[op + 1];
           this.value.splice(op, 2);
           this.value[op - 1] = num;
           op--;
